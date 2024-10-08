@@ -13,37 +13,37 @@ class Auteur{
     }
 
 
-    public function getNom()
+    public function getNom() : string
     {
         return $this->nom;
     }
 
 
-    public function setNom($nom)
+    public function setNom(string $nom) : string
     {
         $this->nom = $nom;
     }
 
 
-    public function getPrenom()
+    public function getPrenom() : string
     {
         return $this->prenom;
     }
 
 
-    public function setPrenom($prénom)
+    public function setPrenom(string $prénom) : string
     {
         $this->prénom = $prenom;
     }
 
 
-    public function getLivres()
+    public function getLivres() : array
     {
         return $this->livres;
     }
 
    
-    public function setLivres($livres)
+    public function setLivres(array $livres) : array
     {
         $this->livres = $livre;
     }
@@ -59,7 +59,7 @@ class Auteur{
     public function afficherBibliographie(){
         $result = "<h2>Livres de $this</h2>";
         foreach ($this->livres as $livre){
-            $result .= "$livre"; 
+            $result .= $livre; 
         }
         return $result;
     }

@@ -7,7 +7,7 @@ class Livre{
     private float $prix;
     private Auteur $auteur;
 
-    public  function __construct($titre, $anneeParution, $nbPages, $prix, Auteur $auteur){
+    public  function __construct(string $titre, int $anneeParution, int $nbPages, float $prix, Auteur $auteur){
         $this-> titre = $titre;
         $this-> anneeParution = $anneeParution;
         $this-> nbPages = $nbPages;
@@ -18,60 +18,60 @@ class Livre{
     }
 
 
-    public function getTitre()
+    public function getTitre() : string
     {
         return $this->titre;
     }
 
 
-    public function setTitre($titre)
+    public function setTitre(string $titre) : string
     {
         $this->titre = $titre;
     }
 
 
-    public function getNbPages()
+    public function getNbPages() : int 
     {
         return $this->nbPages;
     }
 
 
-    public function setNbPages($nbPages)
+    public function setNbPages(int $nbPages) : int
     {
         $this->nbPages = $nbPages;
     }
 
 
-    public function getAnneeParution()
+    public function getAnneeParution() : int
     {
         return $this->anneeParution;
     }
 
 
-    public function setAnneeParution($anneeParution)
+    public function setAnneeParution(int $anneeParution) : int
     {
         $this->anneeParution = $anneeParution;
     }
 
 
-    public function getPrix()
+    public function getPrix() : float
     {
         return $this->prix;
     }
 
 
-    public function setPrix($prix)
+    public function setPrix(float $prix) : float
     {
         $this->prix = $prix;
     }
 
 
-    public function getAuteur()
+    public function getAuteur() : string
     {
         return $this->auteur;
     }
 
-    public function setAuteur($auteur)
+    public function setAuteur(string $auteur) : string
     {
         $this->auteur = $auteur;
     }
